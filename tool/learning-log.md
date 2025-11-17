@@ -47,9 +47,33 @@ add([
 * Next Steps
   * Temp side tasks project containing each body feature.
 
-### X/X/XX:
-* Text
+### 11/16/25:
+* 
 
+### 11/17/25:
+* Looked through [Kaboom's official website](https://kaboomjs.com/doc/setup) documentary
+  * Started learning about more codes I could use
+    * `isGrounded()`, this allows me to check if my sprite is on the platform so it wouldn't do anything against the logics I want such as unable to jump while in the air still.
+    * `move()`, this allows me to add movements to my sprite, such as when you are pressing down d it moves you to the right.
+      ```js
+      const speed = 200;
+      onKeyDown("d", () => {
+	    bean.move(speed, 0)
+      })
+      ```
+* Played around a bit with adding stuff into my game, it required some actual patient as you are to create objects such as trees yourself using shapes.
+* A bit confused on the logics,
+  * How does the arrows suh as `=>` work in these statements?
+    ```js
+    onKeyPress("space", () => {
+    if (bean.isGrounded()) {
+        bean.jump();
+    }
+    });
+    ```
+  * How should I implement the basic JS into Kaboom?
+* Next steps
+  * Learn and tinker more about codes that could help my game.
 
 <!-- 
 * Links you used today (websites, videos, etc)
