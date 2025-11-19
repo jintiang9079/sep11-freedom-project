@@ -47,8 +47,6 @@ add([
 * Next Steps
   * Temp side tasks project containing each body feature.
 
-### 11/16/25:
-* 
 
 ### 11/17/25:
 * Looked through [Kaboom's official website](https://kaboomjs.com/doc/setup) documentary
@@ -74,6 +72,9 @@ add([
   * How should I implement the basic JS into Kaboom?
 * Next steps
   * Learn and tinker more about codes that could help my game.
+
+### 11/24/25:
+* 
 
 <!-- 
 * Links you used today (websites, videos, etc)
