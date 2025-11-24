@@ -74,8 +74,22 @@ add([
   * Learn and tinker more about codes that could help my game.
 
 ### 11/24/25:
-* 
-
+* Looked through [Kaboom's official website](https://kaboomjs.com/doc/setup) documentary
+	* Started learning about more codes I could use
+		 * `.onCollide`, checks when something is touching or colliding with something.
+		* `shake()`, shakes the screen.
+    	```js
+		bean.onCollide("tree", () => {
+   		 addKaboom(bean.pos);
+    	shake();
+		});
+     	```
+		* This makes it so that when `bean` collides with `tree` it adds Kaboom effect to `bean`'s position and also shakes the screen.
+* I was implementing these codes but it gave me errors as I used `("tree"), () => {` instead of `("tree", () => {`, this confused me a bit, as it would make sense for me to use `("")`.
+* Can `bean.` be used as a if statement?
+  * What type of code will it allow for the if statement?
+* Next steps
+	* Keep learning and tinkering more about code that could help my game.
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
