@@ -47,10 +47,73 @@ add([
 * Next Steps
   * Temp side tasks project containing each body feature.
 
-### X/X/XX:
-* Text
 
+### 11/17/25:
+* Looked through [Kaboom's official website](https://kaboomjs.com/doc/setup) documentary
+  * Started learning about more codes I could use
+    * `isGrounded()`, this allows me to check if my sprite is on the platform so it wouldn't do anything against the logics I want such as unable to jump while in the air still.
+    * `move()`, this allows me to add movements to my sprite, such as when you are pressing down d it moves you to the right.
+      ```js
+      const speed = 200;
+      onKeyDown("d", () => {
+	    bean.move(speed, 0)
+      })
+      ```
+* Played around a bit with adding stuff into my game, it required some actual patient as you are to create objects such as trees yourself using shapes.
+* A bit confused on the logics,
+  * How does the arrows suh as `=>` work in these statements?
+    ```js
+    onKeyPress("space", () => {
+    if (bean.isGrounded()) {
+        bean.jump();
+    }
+    });
+    ```
+  * How should I implement the basic JS into Kaboom?
+* Next steps
+  * Learn and tinker more about codes that could help my game.
 
+### 11/24/25:
+* Looked through [Kaboom's official website](https://kaboomjs.com/doc/setup) documentary
+	* Started learning about more codes I could use
+		 * `.onCollide`, checks when something is touching or colliding with something.
+		* `shake()`, shakes the screen.
+    	```js
+		bean.onCollide("tree", () => {
+   		 addKaboom(bean.pos);
+    	shake();
+		});
+     	```
+		* This makes it so that when `bean` collides with `tree` it adds Kaboom effect to `bean`'s position and also shakes the screen.
+* I was implementing these codes but it gave me errors as I used `("tree"), () => {` instead of `("tree", () => {`, this confused me a bit, as it would make sense for me to use `("")`.
+* Can `bean.` be used as a if statement?
+  * What type of code will it allow for the if statement?
+* Next steps
+	* Keep learning and tinkering more about code that could help my game.
+
+### 12/01/25:
+* Looked through [Kaboom's official website](https://kaboomjs.com/doc/setup) documentary
+	* Started learning about more codes I could use
+   		* `rect`, adds a block into the game.
+       		* Could be combined with other codes such as `move`, and more.
+           ```js
+			add([
+       		rect(48, 64),
+        	area(),
+        	outline(4),
+        	pos(width(), height() - 48),
+        	anchor("botleft"),
+       		color(255, 180, 255),
+       		move(LEFT, 240),
+       		"tree",
+    		]);
+           ```
+           * This makes it so that the block is anchored to a certain degree on the baseplate, and also moves constantly to the left.
+* I was messing around with adding squares into my games and positioning them, but sometimes it ended upside down, so to fix that, I had to use `anchor("botleft")`.
+* Can functions, loops and any other external features such as functions be used for these?
+  * Can I add more shapes?
+* Next steps
+	* Keep learning and tinkering more about code that could help my game, and look at more templates of games.
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
