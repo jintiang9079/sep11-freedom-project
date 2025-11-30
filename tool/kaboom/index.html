@@ -30,14 +30,77 @@
 import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
 
 // initialize kaboom context
-kaboom();
 
-// add a piece of text at position (120, 80)
+const k = kaboom();
+
+
+k.loadSprite("bean", "assets/bean.png")
+
+const speed = 200;
+
+const bean = k.add([
+	k.pos(120, 80),
+	k.sprite("bean"),
+	area(),
+	body(),
+])
+
+loop(1, () => {
+    add([
+        rect(48, 64),
+        area(),
+        outline(4),
+        pos(width(), height() - 48),
+        anchor("botleft"),
+        color(255, 180, 255),
+        move(LEFT, 240),
+        "tree",
+    ]);
+});
+
 add([
-    loadSprite("froggy", "sprites/froggy.png");
-    text("hello"),
-    pos(120, 80),
-]);
+    rect(width(), 48),
+    pos(0, height() - 48),
+    outline(4),
+    area(),
+    body({ isStatic: true }),
+    color(127, 200, 255),
+    "floor",
+])
+
+add([
+
+])
+
+bean.onCollide("floor", () => {
+    addKaboom(bean.pos);
+    shake();
+});
+
+bean.onCollide("tree", () => {
+    addKaboom(bean.pos);
+    shake();
+});
+
+    onKeyPress("space", () => {
+    if (bean.isGrounded()) {
+        bean.jump();
+    }
+    });
+
+onKeyDown("d", () => {
+	bean.move(speed, 0)
+})
+
+onKeyDown("a", () => {
+	bean.move(-speed, 0)
+})
+
+
+k.onClick(() => k.addKaboom(k.mousePos()))
+setGravity(1600)
+
+
 
 </script>
     </body>
