@@ -90,6 +90,30 @@ add([
   * What type of code will it allow for the if statement?
 * Next steps
 	* Keep learning and tinkering more about code that could help my game.
+
+### 12/01/25:
+* Looked through [Kaboom's official website](https://kaboomjs.com/doc/setup) documentary
+	* Started learning about more codes I could use
+   		* `rect`, adds a block into the game.
+       		* Could be combined with other codes such as `move`, and more.
+           ```js
+			add([
+       		rect(48, 64),
+        	area(),
+        	outline(4),
+        	pos(width(), height() - 48),
+        	anchor("botleft"),
+       		color(255, 180, 255),
+       		move(LEFT, 240),
+       		"tree",
+    		]);
+           ```
+           * This makes it so that the block is anchored to a certain degree on the baseplate, and also moves constantly to the left.
+* I was messing around with adding squares into my games and positioning them, but sometimes it ended upside down, so to fix that, I had to use `anchor("botleft")`.
+* Can functions, loops and any other external features such as functions be used for these?
+  * Can I add more shapes?
+* Next steps
+	* Keep learning and tinkering more about code that could help my game, and look at more templates of games.
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
