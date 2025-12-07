@@ -114,6 +114,35 @@ add([
   * Can I add more shapes?
 * Next steps
 	* Keep learning and tinkering more about code that could help my game, and look at more templates of games.
+  
+ ### 12/08/25:
+* Looked through [Kaboom's official website](https://kaboomjs.com/doc/setup) documentary
+	* Started learning about more codes I could use
+ 		* `rand(x, y)`, `wait()`.
+     		* `wait()` will wait `x` time, while random will give a random input between `x` and `y`
+         ```js
+         function spawnTree() {
+   		 add([
+                rect(48, 64),
+        area(),
+        outline(4),
+        pos(width(), height() - 48),
+        anchor("botleft"),
+        color(255, 180, 255),
+        move(LEFT, 240),
+        "tree",
+	    ]);
+   		 wait(rand(0.5, 1.5), () => {
+        spawnTree();
+   			 });
+			}
+         ```
+         * This makes it so that the function `spawnTree` will wait between the time 0.5 to 1.5 using `rand` and `wait`, then spawn the tree.
+* I was messing around with wait and rand, the `spawnTree` wasn't working as I had put it **outside** of the wait block, so it wasn't waiting; instead, it just spawned trees as normal, so in order to fix this, I had to put `spawnTree()` inside the wait block for it to work.
+* How can I utilise `wait` better? Like, how can I make it execute at a specific time?
+	*  What's the maximum random number we can get?
+ *  Next steps
+	* Keep learning and tinkering more about code that could help my game, and look at more templates of games.
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
