@@ -20,6 +20,7 @@ My current EDP stage is making mini projects and doing basic setup of my game. I
   
 <h3>Next plans</h3>  
 For the next step, I plan to finally work on my game and also learn some advanced kaboom code that could help my project.
+  
 ## Skills
 In conclusion, some skills that I've developed during this blog would be:
 * Teamwork, I've learned how to properly work with others during my time learning Kaboom's code, we helped each other out and eventually learnt more and easier.
